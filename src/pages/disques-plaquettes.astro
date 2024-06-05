@@ -1,0 +1,51 @@
+---
+// Ceci est une section front-matter dans Astro pour définir les métadonnées de la page
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Comment démonter des disques et des plaquettes de frein et les remplacer ?';
+const duration = 'Durée: 1h30/2h';
+const tools = [
+  'Tournevis a tête plate',
+  'Caisse avec cliquet et douilles',
+  'Marteau classique',
+  'Repousse piston',
+  'Cric',
+  'Graisse cuivrée',
+  'Clé a chocs ou croisillion',
+  'Nettoyant frein',
+  'Clé dynamométrique'
+];
+const steps = [
+  'Lever sur un pont ou posé sur cric+chandelle la voiture',
+  'Démonter la roue en dévissant les goujons à l’aide de la clé a choc ou le croisillon (si utilisation du croisillon debloquer les goujons avant de lever la voiture)',
+  'Après avoir enlever la roue vous avez accès a l’étrier, A l’aide d’un cliquet dévisser le bas de l’étrier',
+  'Repousser légèrement le piston à l’aide d’un tourne vis en prenant appuis entre le corps de l’étrier et le la plaquette de frein',
+  'Faire pivoter l’étrier vers le haut ou le bas pour pouvoir accéder aux plaquettes de frein. On peut aussi déposer la partie mobile de l’étrier pour plus de faciliter',
+  'Retirer les ressorts qui maintiennent en place les plaquettes, en repérant bien leur sens et leur position, pour faciliter le remontage',
+  'Profiter que les plaquettes de frein soient enlevées pour nettoyer l’étrier à l’aide d’une brosse métallique ou de nettoyant frein',
+  'Pour les étriers flottants, vérifier que les axes flottants (coulisseaux) coulissent bien dans leur logement et qu’ils ne soient pas grippés et bien graissés (sinon appliquer de la graisse cuivrée). Cela est indispensable au bon fonctionnement de l’étrier',
+  'Repousser complètement le piston à l’aide du repousse piston, sans cela il sera impossible d’insérer les plaquettes étant donné que les garnitures des plaquettes seront neuves. Cette opération va repousser du liquide de frein vérifier donc d’abord que le bocal ne soit pas plein',
+  'Insérer les plaquettes de frein neuves dans leur logement',
+  'Les plaquettes de frein sont désormais bien en place, repositionner les ressorts sur les plaquettes. Attention elles ont un sens de montage bien défini, d’où l’importance de faire le repère',
+  'Repositionner la partie mobile de l’étrier sur la partie fixe de l’étrier et bien aligner les coulisseaux avec les trous de fixation, avant serrage vérifier bien que les plaquettes et leur ressorts soient bien positionnés et fixer la partie mobile à la partie fixe de l’étrier',
+  'Nettoyer votre disque afin d’éliminer les traces de gras',
+  'Remonter la roue et ses écrous manuellement, et quand les roues touchent le sol, serrer le tout à l’aide d’une clé a chocs ou d’un croisillon puis serrer au couple avec une clé dynamométrique'
+];
+---
+
+<Layout title={title}>
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-2xl font-bold mb-4">{title}</h1>
+    <p class="text-gray-600 mb-6">{duration}</p>
+    
+    <h2 class="text-xl font-semibold mb-2">Outils nécessaires au démontage :</h2>
+    <ul class="list-disc list-inside mb-6">
+      {tools.map(tool => <li>{tool}</li>)}
+    </ul>
+    
+    <h2 class="text-xl font-semibold mb-2">Les étapes de démontage :</h2>
+    <ol class="list-decimal list-inside space-y-2">
+      {steps.map(step => <li>{step}</li>)}
+    </ol>
+  </div>
+</Layout>

@@ -1,0 +1,55 @@
+---
+// Ceci est une section front-matter dans Astro pour définir les métadonnées de la page
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Comment démonter des amortisseurs et les remplacer ?';
+const tools = [
+  'Cliquet + douilles longues de 16 a 24 mm',
+  'Cric',
+  'Chandelles',
+  'Graisse cuivrée',
+  'Dégrippant',
+  'Marteau',
+  'Barre métallique',
+  'Clé de 13',
+  'Compresseur de ressort'
+];
+const steps = [
+  'Placez des chandelles sous le véhicule et levez ce dernier. Le véhicule ne repose désormais que sur ses roues arrière. Cette opération annule la compression du train avant et facilite ainsi le démontage.',
+  'Commencez par la partie inférieure de l’amortisseur. Appliquez du dégrippant au niveau du support.',
+  'Appliquez du dégrippant sur le boulon de fixation de la barre stabilisatrice. Puis démontez-la.',
+  'Dévissez le boulon de serrage du support de la jambe de suspension et retirez-le.',
+  'Utilisez un marteau ou un maillet de manière à taper sur le support métallique de la jambe de suspension. Faites levier avec une barre métallique. La jambe finit par sortir.',
+  'Dévissez ensuite les 2 ou 3 boulons situés sur la partie supérieure du passage de roue. Ces boulons font partie de la coupelle d\'amortisseur. Celle-ci est faite en caoutchouc mais se fixe généralement en 2 ou 3 points sur la carrosserie et son rôle est de retenir l\'amortisseur (une clé de 13 est nécessaire). ATTENTION : NE DÉVISSEZ JAMAIS LE BOULON CENTRAL ! Il laisserait s\'échapper le ressort et vous risqueriez d\'endommager votre véhicule et de vous faire mal.',
+  'Sortez l\'ensemble. Observez en détail : l’amortisseur, le ressort et la coupelle d\'amortisseur. Munissez-vous de votre compresseur de ressort de manière à séparer l’amortisseur et le ressort. ATTENTION : suivez bien les indications de la notice de l\'appareil si vous êtes novice car l\'opération peut s\'avérer complexe. L\'outil mal placé ou mal fixé sur les spires du ressort pourrait lâcher et risquer de vous blesser.',
+  'Une fois l\'outil bien placé, plus vous vissez les crochets et plus le ressort sera comprimé ; il possède désormais du jeu.',
+  'Dévissez l\'écrou central avec une clé Allen appropriée et maintenez toujours la tige supérieure de l\'amortisseur à l\'aide d\'une clé à œil.',
+  'Vérifiez l\'état des coupelles (ou butées). Le roulement se trouvant à l\'intérieur ne doit pas être grippé et les caoutchoucs ne doivent pas comporter de fissures. Si c\'est le cas, changez-les.',
+  'Vérifiez l\'état du ressort. S\'il est attaqué par la rouille, remplacer le par un neuf. Les ressorts, comme les amortisseurs, sont à changer par paire. S\'il n\'est pas cassé vous pouvez le conserver et le replacer en étant attentif à son sens de montage. Ici, les nôtres sont bons.',
+  'Comparez les amortisseurs.',
+  'Ici les coupelles sont à changer. Placez l\'amortisseur neuf à l\'intérieur. Placez la coupelle métallique d\'amortisseur à travers le filetage de l’amortisseur en veillant au bon positionnement du ressort.',
+  'Enfilez la butée d\'amortisseur à travers la tige filetée de la jambe. Ajoutez la rondelle et l\'écrou de fixation.',
+  'Serrez au maximum avec votre clé Allen',
+  'Desserrez le compresseur de ressort doucement.',
+  'Replacez l\'ensemble en prenant toujours garde au soufflet de cardan. Revissez d\'abord le haut de l’amortisseur à la carrosserie grâce à la coupelle.',
+  'Graissez le support de l\'amortisseur avec de la graisse cuivrée.',
+  'Replacez l’amortisseur dans le support en prenant soin de bien placer l\'encoche dans son emplacement. Tapez au marteau sous la rotule pour bien faire rentrer l’amortisseur dans son support.',
+  'Revissez la biellette ou autre rotule que vous aviez dû démonter.'
+];
+---
+
+<Layout title={title}>
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-2xl font-bold mb-4">{title}</h1>
+    
+    <h2 class="text-xl font-semibold mb-2">Outils nécessaires au démontage :</h2>
+    <ul class="list-disc list-inside mb-6">
+      {tools.map(tool => <li>{tool}</li>)}
+    </ul>
+    
+    <h2 class="text-xl font-semibold mb-2">Les étapes de démontage :</h2>
+    <ol class="list-decimal list-inside space-y-2">
+      {steps.map(step => <li>{step}</li>)}
+    </ol>
+  </div>
+</Layout>
